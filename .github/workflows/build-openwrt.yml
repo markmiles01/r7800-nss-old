@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/mapdio/Ansuel-kernel5.4-nss-qsdk10.0-Lean
+  REPO_URL: https://github.com/mapdio/R7800-Openwrt-with-NSS
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
