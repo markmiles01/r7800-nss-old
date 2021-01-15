@@ -43,15 +43,8 @@
 
 ## 默认配置
 
-| 默认配置 | IP | 用户名 | 密码 |
-| :--- | :--- | :--- | :--- |
-| 路由 & SSH | 10.0.0.1 | root | password |
-| WIFI | -- | -- | password |
+| 全新空白设置 |
 
 ## 固件下载
 网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/ClayMoreBoy/OpenWrt-Actions-R7800/releases/latest)
 
-
-## 来杯咖啡
-
-![](https://raw.githubusercontent.com/ClayMoreBoy/OpenWrt-Actions-R7800/master/Sponsor.png)
