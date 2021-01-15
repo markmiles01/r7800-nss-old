@@ -1,44 +1,57 @@
-# Actions-OpenWrt
+# Netgear R7800 NSS 路由器固件自动编译 [![OpenWrt](https://img.shields.io/badge/From-OpenWrt-blue.svg?style=for-the-badge&logo=appveyor)](https://github.com/openwrt/openwrt) 
+>固件来源：
+[![Lean](https://img.shields.io/badge/Lede-Lean-red.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) 
+ [![Lienol](https://img.shields.io/badge/Package-Lienol-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt-package)  [![CTCGFW](https://img.shields.io/badge/OpenWrt-CTCGFW-orange.svg?style=flat&logo=appveyor)](https://github.com/project-openwrt/openwrt) [![ClayMoreBoy](https://img.shields.io/badge/Mod-ClayMoreBoy-success.svg?style=flat&logo=appveyor)](https://github.com/ClayMoreBoy)
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+## 简介：
+- 自用 OpenWrt 定制项目
+- 若 Fork 项目，请修改代码中自己的 TOKEN ( 项目 Settings/Secrets )
 
-Build OpenWrt using GitHub Actions
+| TOKEN | 释义 |是否必须 |
+| :--- | :--- | :--- |
+| -- EMAIL  | Github用户邮箱 | 是 |
+| -- SCKEY | Server酱SCKEY | 否 |
+| -- RELEASE_TOKEN | 个人 Settings/Developer settings/Personal access tokens新建获取 | 是 |
 
-[Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+## 功能：
+- 可以支持两种种编译模式
+  1. 编译Lean源码(含Lienol Package)
+  2. 编译CTCGFW源码(含Lean & Lienol & CTCGFW & Ntlf9t & Zxlhhyccc Package)
+- 自动上传固件
+- 自动发布固件
+- 自动创建分支
+- 自动上传到奶牛快传
 
-## Usage
+## 变量：
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+| 变量名 | 释义 |
+| :--- | :--- |
+| -- REPO_URL: https://github.com/coolsnowwolf/lede.git  | 定义源码 | 
+| -- REPO_BRANCH: master | 定义分支 |
+| -- DIY_SH: OpenWrt-R7800-Lean.sh | 定义脚本文件 |
+| -- SSH_ACTION: false |是否打开 SSH |
+| -- UPLOAD_BRANCH: true | 是否创建分支来存放编译固件及Package |
+| -- BRANCH: R7800 | 分支名称 |
+| -- GITHUB_USER_NAME: ClayMoreBoy | 定义Github用户名 |
+| -- GITHUB_USER_EMAIL: ${{ secrets.EMAIL }} |定义Github用户邮箱 |
+| -- GITHUB: github.com/ClayMoreBoy/OpenWrt-Actions-R7800.git | 定义上传分支 |
+| -- UPLOAD_FIRMWARE: true | 是否上传固件| 
+| -- UPLOAD_COWTRANSFER: true | 是否上传固件到奶牛快传 |
+| -- CREATE_RELEASE: true | 是否创建发行版本 Release |
+| -- BUILD_USER: ClayMoreBoy | 定义编译者 | 
+| -- SEND_WECHAT_MSG: true | 是否微信通知 | 
 
-## Tips
+## 默认配置
 
-- It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-- Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
+| 默认配置 | IP | 用户名 | 密码 |
+| :--- | :--- | :--- | :--- |
+| 路由 & SSH | 10.0.0.1 | root | password |
+| WIFI | -- | -- | password |
 
-## Acknowledgments
+## 固件下载
+网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/ClayMoreBoy/OpenWrt-Actions-R7800/releases/latest)
 
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
-- [csexton/debugger-action](https://github.com/csexton/debugger-action)
-- [Cowtransfer](https://cowtransfer.com)
-- [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 
-## License
+## 来杯咖啡
 
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © P3TERX
+![](https://raw.githubusercontent.com/ClayMoreBoy/OpenWrt-Actions-R7800/master/Sponsor.png)
