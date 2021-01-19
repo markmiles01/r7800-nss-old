@@ -20,6 +20,9 @@
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
 
+# 添加第三方软件包
+git clone https://github.com/OpenWrt-Actions/OpenAppFilter package/OpenAppFilter
+
 
 # 并入 lean插件包和firewall
 git clone https://github.com/mapdio/lede
