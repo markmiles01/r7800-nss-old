@@ -15,3 +15,8 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+
+# 并入 lean插件包和firewall
+git clone https://github.com/mapdio/lede
+cp /lede/package/lean/ /openwrt/package/
+\cp /lede/package/network/config/firewall/ /openwrt/package/network/config/firewall/
