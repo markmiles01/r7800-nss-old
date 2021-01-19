@@ -26,7 +26,7 @@ git clone https://github.com/OpenWrt-Actions/OpenAppFilter package/OpenAppFilter
 
 # 并入 lean插件包和firewall
 git clone https://github.com/mapdio/lede
-cp -r lede/package/lean /package
+cp -r lede/package/lean package/
 \cp -r lede/package/network/config/firewall  package/network/config/firewall
 
 #添加UPX UCL工具包
@@ -35,4 +35,6 @@ cp -r lede/tools/ucl ./tools
 #修改makefile
 sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
 sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
+#删除lede文件夹
+rm 
 
