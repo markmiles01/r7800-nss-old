@@ -27,7 +27,7 @@ git clone https://github.com/OpenWrt-Actions/OpenAppFilter package/OpenAppFilter
 # 并入 lean插件包和firewall
 git clone https://github.com/mapdio/lede
 cp -r lede/package/lean package/
-\cp -r lede/package/network/config/firewall  package/network/config/firewall
+\cp -r lede/package/network/config/firewall  package/network/config/
 
 #添加UPX UCL工具包
 cp -r lede/tools/upx ./tools
