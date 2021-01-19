@@ -36,5 +36,5 @@ cp -r lede/tools/ucl ./tools
 sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
 sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
 #删除lede文件夹
-rm 
+rm -rf lede
 
