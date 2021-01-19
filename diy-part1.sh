@@ -29,3 +29,10 @@ git clone https://github.com/mapdio/lede
 cp -r lede/package/lean /package
 \cp -r lede/package/network/config/firewall  package/network/config/firewall
 
+#添加UPX UCL工具包
+cp -r lede/tools/upx /tools
+cp -r lede/tools/ucl /tools
+#修改makefile
+sed '/^# builddir dependencies/i\tools-y += ucl upx' tools/Makefile
+sed '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
+
