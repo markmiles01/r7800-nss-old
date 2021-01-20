@@ -3,24 +3,6 @@
 [![Lean](https://img.shields.io/badge/Lede-Lean-red.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) 
  [![Lienol](https://img.shields.io/badge/Package-Lienol-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt-package)  [![CTCGFW](https://img.shields.io/badge/OpenWrt-CTCGFW-orange.svg?style=flat&logo=appveyor)](https://github.com/project-openwrt/openwrt) [![ClayMoreBoy](https://img.shields.io/badge/Mod-ClayMoreBoy-success.svg?style=flat&logo=appveyor)](https://github.com/ClayMoreBoy)
 
-## 简介：
-- 自用 OpenWrt 定制项目
-- 若 Fork 项目，请修改代码中自己的 TOKEN ( 项目 Settings/Secrets )
-
-| TOKEN | 释义 |是否必须 |
-| :--- | :--- | :--- |
-| -- EMAIL  | Github用户邮箱 | 是 |
-| -- SCKEY | Server酱SCKEY | 否 |
-| -- RELEASE_TOKEN | 个人 Settings/Developer settings/Personal access tokens新建获取 | 是 |
-
-## 功能：
-- 可以支持两种种编译模式
-  1. 编译Lean源码(含Lienol Package)
-  2. 编译CTCGFW源码(含Lean & Lienol & CTCGFW & Ntlf9t & Zxlhhyccc Package)
-- 自动上传固件
-- 自动发布固件
-- 自动创建分支
-- 自动上传到奶牛快传
 
 ## 变量：
 
