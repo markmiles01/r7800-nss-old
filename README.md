@@ -26,25 +26,20 @@
 
 | 变量名 | 释义 |
 | :--- | :--- |
-| -- REPO_URL: https://github.com/coolsnowwolf/lede.git  | 定义源码 | 
-| -- REPO_BRANCH: master | 定义分支 |
-| -- DIY_SH: OpenWrt-R7800-Lean.sh | 定义脚本文件 |
+| -- REPO_URL: https://github.com/ACwifidude/openwrt  | 定义源码 | 
+| -- REPO_BRANCH: kernel5.4-nss-qsdk10.0 | 定义分支 |
+| -- DIY_P1_SH: diy-part1.sh | 定义脚本文件 feed update 前 |
+| -- DIY_P2_SH: diy-part2.sh | 定义脚本文件 feed install 后 |
 | -- SSH_ACTION: false |是否打开 SSH |
-| -- UPLOAD_BRANCH: true | 是否创建分支来存放编译固件及Package |
-| -- BRANCH: R7800 | 分支名称 |
-| -- GITHUB_USER_NAME: ClayMoreBoy | 定义Github用户名 |
-| -- GITHUB_USER_EMAIL: ${{ secrets.EMAIL }} |定义Github用户邮箱 |
-| -- GITHUB: github.com/ClayMoreBoy/OpenWrt-Actions-R7800.git | 定义上传分支 |
 | -- UPLOAD_FIRMWARE: true | 是否上传固件| 
-| -- UPLOAD_COWTRANSFER: true | 是否上传固件到奶牛快传 |
+| -- UPLOAD_COWTRANSFER: false | 是否上传固件到奶牛快传 |
 | -- CREATE_RELEASE: true | 是否创建发行版本 Release |
-| -- BUILD_USER: ClayMoreBoy | 定义编译者 | 
-| -- SEND_WECHAT_MSG: true | 是否微信通知 | 
+
 
 ## 默认配置
 
 | 全新空白设置 |
 
-## 固件下载
+## ClayMoreBoy 固件下载
 网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/ClayMoreBoy/OpenWrt-Actions-R7800/releases/latest)
 
