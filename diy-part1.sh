@@ -25,7 +25,7 @@ git clone https://github.com/OpenWrt-Actions/OpenAppFilter package/OpenAppFilter
 
 
 # 并入 lean插件包和firewall
-git clone https://github.com/mapdio/lede
+git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
 #  \cp -r lede/package/network/config/firewall  package/network/config/
 
