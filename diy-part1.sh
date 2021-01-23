@@ -40,6 +40,5 @@ sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/comp
 #删除lede文件夹
 rm -rf ./lede
 
-#删除diffconfig
-rm diffconfig
+
 
