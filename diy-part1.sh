@@ -32,9 +32,14 @@ cp -r lede/package/lean package/
 #添加UPX UCL工具包
 cp -r lede/tools/upx ./tools
 cp -r lede/tools/ucl ./tools
+
 #修改makefile
 sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
 sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
+
 #删除lede文件夹
 rm -rf ./lede
+
+#删除diffconfig
+rm diffconfig
 
