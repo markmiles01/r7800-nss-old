@@ -19,15 +19,13 @@
 #添加 ssr plus 和passwall 支持源
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
-
-# 添加第三方软件包
-git clone https://github.com/OpenWrt-Actions/OpenAppFilter package/OpenAppFilter
+sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
 
 
 # 并入 lean插件包和firewall
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
-#  \cp -r lede/package/network/config/firewall  package/network/config/
+\cp -r lede/package/network/config/firewall  package/network/config/
 
 #添加UPX UCL工具包
 cp -r lede/tools/upx ./tools
