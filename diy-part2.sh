@@ -14,7 +14,6 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 自定义固件设置
-rm -rf package/default-settings/files/zzz-default-settings
-cp -f ../zzz-default-settings package/lean/default-settings/files/
+[ -e $DEF_SETS ] && mv -f $DEF_SETS package/default-settings/files/
 
 
