@@ -24,7 +24,7 @@ cp -r lede/package/lean package/
 # cp lede/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
 # cp lede/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 \cp lede/feeds.conf.default feeds.conf.default
-\cp -r lede/package/network/config/firewall  package/network/config/
+# \cp -r lede/package/network/config/firewall  package/network/config/
 
 #添加 ssr plus 和passwall 支持源
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
