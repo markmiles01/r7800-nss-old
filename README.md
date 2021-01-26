@@ -21,7 +21,7 @@
 
 | 默认配置 | IP | 用户名 | 密码 |
 | :--- | :--- | :--- | :--- |
-| 路由 & SSH | 192.168.1.1 | root | password |
+| 路由 & SSH | ---  | root | password |
 
 ## N7800 with NSS 固件下载
 网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/mapdio/R7800-Openwrt-with-NSS/releases/latest)
