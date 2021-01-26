@@ -22,11 +22,13 @@ on:
 env:
   REPO_URL: https://github.com/ACwifidude/openwrt
   REPO_BRANCH: kernel5.4-nss-qsdk10.0
+  BRANCH: R7800-with-NSS
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   DEF_SETS: zzz-default-settings
+  UPLOAD_BRANCH: true
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -34,8 +36,9 @@ env:
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   BUILD_USER: Mapdio
-  BRANCH: R7800-with-NSS
-  
+  GITHUB_USER_NAME: mapdio
+  GITHUB_USER_EMAIL: ${{ secrets.EMAIL }}
+  GITHUB: github.com/mapdio/R7800-Openwrt-with-NSS.git
   
 jobs:
   build:
@@ -117,7 +120,19 @@ jobs:
     - name: Check space usage
       if: (!cancelled())
       run: df -hT
-
+    
+    - name: Upload Branch
+      env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      run: |
+          cd openwrt/bin
+          git init
+          git config user.name $GITHUB_USER_NAME
+          git config user.email $GITHUB_USER_EMAIL
+          git add .
+          git commit -m "Update OpenWrt_"$BRANCH
+          git push --force --quiet https://${{ secrets.RELEASE_TOKEN }}@$GITHUB HEAD:OpenWrt-$BRANCH
+    
     - name: Upload bin directory
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
