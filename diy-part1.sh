@@ -21,8 +21,7 @@ rm -rf bin
 # 并入 lean插件包feeds和firewall
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
-# cp lede/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
-# cp lede/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+cp lede/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
 \cp lede/feeds.conf.default feeds.conf.default
 \cp -r lede/package/network/config/firewall  package/network/config/
 
