@@ -21,17 +21,18 @@ rm -rf bin
 # 并入 lean插件包feeds和firewall
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
-\cp lede/feeds.conf.default feeds.conf.default
-rm -rf package/lean/openwrt-fullconenat
-git clone https://github.com/Lienol/openwrt lineol
-\cp -r lineol/package/network/fullconenat package/network/
-\cp -r lineol/package/network/config/firewall  package/network/config/
-\cp  lineol/target/linux/generic/hack-4.9/952-net-conntrack-events-support-multiple-registrant.patch target/linux/ipq806x/patches-5.4/
+# \cp lede/feeds.conf.default feeds.conf.default
+# rm -rf package/lean/openwrt-fullconenat
+# git clone https://github.com/Lienol/openwrt lineol
+# \cp -r lineol/package/network/fullconenat package/network/
+# \cp -r lineol/package/network/config/firewall  package/network/config/
+# \cp  lineol/target/linux/generic/hack-4.9/952-net-conntrack-events-support-multiple-registrant.patch target/linux/ipq806x/patches-5.4/
 
-#添加 ssr plus 和passwall 支持源
-sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
+# 添加 ssr plus 和passwall 支持源
+# sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+# sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
 sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
+sed -i '/helloworld/ s/#//' .config
 
 
 #添加UPX UCL工具包
@@ -44,7 +45,7 @@ sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/comp
 
 #删除lede，lineol文件夹
 rm -rf lede
-rm -rf lineol
+
 
 
 
