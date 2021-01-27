@@ -22,6 +22,7 @@ rm -rf bin
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
+rm -rf package/lean/openwrt-fullconenat
 git clone https://github.com/Lienol/openwrt lineol
 \cp -r lineol/package/network/fullconenat package/network/
 \cp -r lineol/package/network/config/firewall  package/network/config/
