@@ -11,6 +11,7 @@
 
 name: 删除旧固件
 on:
+  workflow_dispatch:
   # schedule:
   #  - cron: 0 10 * * *
 
