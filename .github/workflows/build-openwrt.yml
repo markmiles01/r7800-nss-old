@@ -29,7 +29,7 @@ env:
   DIY_P2_SH: diy-part2.sh
   DEF_SETS: zzz-default-settings
   UPLOAD_BRANCH: true
-  UPLOAD_BIN_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
