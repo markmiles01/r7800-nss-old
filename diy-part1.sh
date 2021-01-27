@@ -22,7 +22,10 @@ rm -rf bin
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
-# \cp -r lede/package/network/config/firewall/files  package/network/config/firewall/
+git clone https://github.com/Lienol/openwrt lineol
+\cp -r lineol/package/network/fullconenat package/network/
+\cp -r lineol/package/network/config/firewall  package/network/config/firewall/
+\cp  lineol/target/linux/generic/hack-4.9/952-net-conntrack-events-support-multiple-registrant.patch target/linux/ipq806x/patches-5.4/
 
 #添加 ssr plus 和passwall 支持源
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
