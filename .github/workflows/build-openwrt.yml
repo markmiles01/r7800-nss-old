@@ -72,20 +72,19 @@ jobs:
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_P1_SH
-        
+        chmod +x $DIY_P1_SH        
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
       run: |
         chmod +x $FEED_CLEAN
-        cd openwrt && ./scripts/feeds install -a
+        cd openwrt && ./scripts/feeds update -a
         $GITHUB_WORKSPACE/$FEED_CLEAN
 
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
+  
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
