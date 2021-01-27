@@ -28,7 +28,7 @@ cp -r lede/package/lean package/
 # sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
 sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
-sed -i '/helloworld/ s/#//' .config
+sed -i '/helloworld/ s/#//'  feeds.conf.default
 
 
 #添加UPX UCL工具包
