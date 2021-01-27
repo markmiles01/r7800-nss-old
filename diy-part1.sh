@@ -22,7 +22,7 @@ rm -rf bin
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
-\cp -r lede/package/network/config/firewall/files  package/network/config/firewall/
+# \cp -r lede/package/network/config/firewall/files  package/network/config/firewall/
 
 #添加 ssr plus 和passwall 支持源
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
