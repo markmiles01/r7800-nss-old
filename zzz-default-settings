@@ -3,6 +3,9 @@
 uci set luci.main.lang=zh_cn
 uci commit luci
 
+uci set irqbalance.irqbalance.enabled=1
+uci commit irqbalance
+
 # 固件名称
 uci set system.@system[0].hostname=NetGear
 uci set system.@system[0].timezone=CST-8
@@ -57,6 +60,11 @@ sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.8/g; }'  /etc/opkg/distfeed
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
+
+sed -i '/ondemand/d' /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+echo "performance" >> /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+sed -i '/ondemand/d' /sys/devices/system/cpu/cpufreq/policy1/scaling_governor
+echo "performance" >> /sys/devices/system/cpu/cpufreq/policy1/scaling_governor
 
 sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
