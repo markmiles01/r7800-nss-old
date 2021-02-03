@@ -52,6 +52,39 @@ sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/comp
 # rm -rf package/lean/v2ray-plugin
 # rm -rf package/lean/v2ray
 rm -rf package/lean/microsocks
+rm -rf package/lean/luci-app-diskman
+rm -rf package/lean/luci-app-jd-dailybonus
+rm -rf package/lean/luci-app-ramfree
+rm -rf package/lean/luci-app-ttyd
+rm -rf package/lean/luci-app-unblockmusic
+rm -rf package/lean/luci-app-usb-printer
+rm -rf package/lean/luci-app-vlmcsd
+rm -rf package/lean/luci-app-vsftpd
+rm -rf package/lean/luci-app-xlnetacc
+rm -rf package/lean/luci-theme-argon
+rm -rf package/lean/luci-lib-docker
+rm -rf package/lean/microsocks
+rm -rf package/lean/parted
+rm -rf package/lean/redsocks2
+rm -rf package/lean/tcpping
+rm -rf package/lean/vlmcsd
+rm -rf package/lean/UnblockNeteaseMusic
+rm -rf package/lean/UnblockNeteaseMusicGo
+rm -rf package/lean/adbyby
+rm -rf package/lean/baidupcs-web
+rm -rf package/lean/luci-app-adbyby-plus
+rm -rf package/lean/luci-app-advancedsetting
+rm -rf package/lean/luci-app-airplay2
+rm -rf package/lean/luci-app-cifs-mount
+rm -rf package/lean/luci-app-frpc
+rm -rf package/lean/luci-app-frps
+rm -rf package/lean/frp
+rm -rf package/lean/ddns-scripts_aliyun
+rm -rf package/lean/ddns-scripts_dnspod
+rm -rf package/lean/dnsforwarder
+rm -rf package/lean/
+rm -rf package/lean/
+rm -rf package/lean/
 
 # 删除lede文件夹
 rm -rf lede
