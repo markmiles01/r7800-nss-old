@@ -26,9 +26,11 @@ cp -r lede/package/lean package/
 
 
 # 添加 ssr plus 和passwall 支持源
-sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
+# sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+# sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
+# sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
+
+ sed -i '$a src-git OpenWrt-packages https://github.com/OpenWrt-Actions/OpenWrt-Packages' feeds.conf.default
 
 
 
@@ -42,13 +44,13 @@ sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/comp
 
 
 # 删除重复插件
-rm -rf package/lean/ipt2socks
-rm -rf package/lean/dns2socks
-rm -rf package/lean/pdnsd-alt
-rm -rf package/lean/shadowsocksr-libev
-rm -rf package/lean/simple-obfs
-rm -rf package/lean/v2ray-plugin
-rm -rf package/lean/v2ray
+# rm -rf package/lean/ipt2socks
+# rm -rf package/lean/dns2socks
+# rm -rf package/lean/pdnsd-alt
+# rm -rf package/lean/shadowsocksr-libev
+# rm -rf package/lean/simple-obfs
+# rm -rf package/lean/v2ray-plugin
+# rm -rf package/lean/v2ray
 rm -rf package/lean/microsocks
 
 # 删除lede文件夹
