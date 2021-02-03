@@ -30,7 +30,7 @@ cp -r lede/package/lean package/
 # sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
 # sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
 
- sed -i '$a src-git OpenWrt-packages https://github.com/OpenWrt-Actions/OpenWrt-Packages' feeds.conf.default
+ sed -i '$a src-git OpenWrt-packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 
 
 
