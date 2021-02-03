@@ -9,11 +9,11 @@
 # Description: Source code update checker
 #
 
-name: Kenzo Update Checker
+name: Packages Update Checker
 
 env:
-  REPO_URL: https://github.com/kenzok8/openwrt-packages
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/liuran001/openwrt-packages
+  REPO_BRANCH: packages
 
 on:
   workflow_dispatch:
@@ -49,7 +49,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.RELEASE_TOKEN }}
-        event-type: Kenzo Code Update
+        event-type: Packages Code Update
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
