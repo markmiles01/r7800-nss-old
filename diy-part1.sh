@@ -82,9 +82,7 @@ rm -rf package/lean/frp
 rm -rf package/lean/ddns-scripts_aliyun
 rm -rf package/lean/ddns-scripts_dnspod
 rm -rf package/lean/dnsforwarder
-rm -rf package/lean/
-rm -rf package/lean/
-rm -rf package/lean/
+
 
 # 删除lede文件夹
 rm -rf lede
