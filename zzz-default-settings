@@ -17,6 +17,13 @@ uci commit system
 # uci set flowoffload.@flow[0].bbr=1
 # uci set flowoffload.@flow[0].dns=1
 # uci commit flowoffload
+uci set sfe.config.enabled=1
+uci set sfe.config.dns=1
+uci set sfe.config.bbr=1
+uci set sfe.config.wifi=1
+uci set sfe.config.dns_server='119.29.29.29,223.5.5.5,180.76.76.76,114.114.114.114,114.114.115.115'
+uci commit sfe
+
 
 # 默认开启解锁网易云灰色歌曲
 uci set unblockmusic.@unblockmusic[0].enabled=1
@@ -61,9 +68,8 @@ sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 echo "iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user
 
-sed -i '/ondemand/d' /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+# 设置CPU为性能模式
 echo "performance" >> /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-sed -i '/ondemand/d' /sys/devices/system/cpu/cpufreq/policy1/scaling_governor
 echo "performance" >> /sys/devices/system/cpu/cpufreq/policy1/scaling_governor
 
 sed -i '/option disabled/d' /etc/config/wireless
