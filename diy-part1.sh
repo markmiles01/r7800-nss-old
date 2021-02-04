@@ -26,11 +26,10 @@ cp -r lede/package/lean package/
 
 
 # 添加 ssr plus 和passwall 支持源
-# sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-# sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
-# sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
+sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small  https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilter' feeds.conf.default
 
- sed -i '$a src-git liuran001 https://github.com/liuran001/openwrt-packages' feeds.conf.default
 
 
 
@@ -44,44 +43,15 @@ sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/comp
 
 
 # 删除重复插件
-# rm -rf package/lean/ipt2socks
-# rm -rf package/lean/dns2socks
-# rm -rf package/lean/pdnsd-alt
-# rm -rf package/lean/shadowsocksr-libev
-# rm -rf package/lean/simple-obfs
-# rm -rf package/lean/v2ray-plugin
-# rm -rf package/lean/v2ray
+rm -rf package/lean/ipt2socks
+rm -rf package/lean/dns2socks
+rm -rf package/lean/pdnsd-alt
+rm -rf package/lean/shadowsocksr-libev
+rm -rf package/lean/simple-obfs
+rm -rf package/lean/v2ray-plugin
+rm -rf package/lean/v2ray
 rm -rf package/lean/microsocks
-rm -rf package/lean/luci-app-diskman
-rm -rf package/lean/luci-app-jd-dailybonus
-rm -rf package/lean/luci-app-ramfree
-rm -rf package/lean/luci-app-ttyd
-rm -rf package/lean/luci-app-unblockmusic
-rm -rf package/lean/luci-app-usb-printer
-rm -rf package/lean/luci-app-vlmcsd
-rm -rf package/lean/luci-app-vsftpd
-rm -rf package/lean/luci-app-xlnetacc
-rm -rf package/lean/luci-theme-argon
-rm -rf package/lean/luci-lib-docker
-rm -rf package/lean/microsocks
-rm -rf package/lean/parted
-rm -rf package/lean/redsocks2
-rm -rf package/lean/tcpping
-rm -rf package/lean/vlmcsd
-rm -rf package/lean/UnblockNeteaseMusic
-rm -rf package/lean/UnblockNeteaseMusicGo
-rm -rf package/lean/adbyby
-rm -rf package/lean/baidupcs-web
-rm -rf package/lean/luci-app-adbyby-plus
-rm -rf package/lean/luci-app-advancedsetting
-rm -rf package/lean/luci-app-airplay2
-rm -rf package/lean/luci-app-cifs-mount
-rm -rf package/lean/luci-app-frpc
-rm -rf package/lean/luci-app-frps
-rm -rf package/lean/frp
-rm -rf package/lean/ddns-scripts_aliyun
-rm -rf package/lean/ddns-scripts_dnspod
-rm -rf package/lean/dnsforwarder
+
 
 
 # 删除lede文件夹
