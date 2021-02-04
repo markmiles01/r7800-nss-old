@@ -152,6 +152,8 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         rm -rf *uImage
+        mv openwrt-ipq806x-generic-netgear_r7800-squashfs-sysupgrade.bin openwrt-ipq806x-generic-netgear_r7800-squashfs-sysupgrade${{ env.FILE_DATE }}.bin
+        mv openwrt-ipq806x-generic-netgear_r7800-squashfs-factory.img openwrt-ipq806x-generic-netgear_r7800-squashfsfactory-${{ env.FILE_DATE }}.img
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
@@ -184,7 +186,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "RELEASE_TAG=$(TZ=UTC-8 date +"%Y-%m-%d.%H%M")" >> $GITHUB_ENV
+        echo "RELEASE_TAG=$(date +"%Y-%m-%d.%H%M")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
     - name: Upload Firmware To Release
