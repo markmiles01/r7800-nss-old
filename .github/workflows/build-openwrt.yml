@@ -129,7 +129,7 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       run: |
-          cp openwrt/.config openwrt/bin/full.config
+          cp openwrt/.config openwrt/bin/targets/ipq806x/generic/full.build.config
           cd openwrt/bin
           git init
           git config user.name $GITHUB_USER_NAME
