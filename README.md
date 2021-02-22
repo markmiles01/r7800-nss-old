@@ -17,11 +17,14 @@
 | -- UPLOAD_COWTRANSFER: false | 是否上传固件到奶牛快传 |
 | -- CREATE_RELEASE: true | 是否创建发行版本 Release |
 
+| Actions里使用自定义Repo Secrets名称 |
+RELEASE_TOKEN |EMAIL
+
 ## 默认配置
 
 | 默认配置 | IP | 用户名 | 密码 |
 | :--- | :--- | :--- | :--- |
-| 路由 & SSH | ---  | root | password |
+| 路由 & SSH | 192.168.10.1  | root | password |
 
 ## N7800 with NSS 固件下载
 网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/mapdio/R7800-Openwrt-with-NSS/releases/latest)
