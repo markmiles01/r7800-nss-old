@@ -17,9 +17,10 @@
 | -- UPLOAD_COWTRANSFER: false | 是否上传固件到奶牛快传 |
 | -- CREATE_RELEASE: true | 是否创建发行版本 Release |
 
-| Repo Secrets名称 | 
-| -- RELEASE_TOKEN |
-| --EMAIL |
+| Repo Secrets名称 |
+| :--- | :--- |
+| RELEASE_TOKEN | |
+| EMAIL | |
 
 
 ## 默认配置
