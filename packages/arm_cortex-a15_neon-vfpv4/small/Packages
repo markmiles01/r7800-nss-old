@@ -1,0 +1,78 @@
+Package: dns2socks
+Version: 2.1-20200218
+Depends: libc, libpthread
+License: BSD-3-Clause
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 10682
+Filename: dns2socks_2.1-20200218_arm_cortex-a15_neon-vfpv4.ipk
+Size: 11448
+SHA256sum: 8100f844180083371bc08c84797606bcd9ddf9c3c69aa4b881c6e3d3de9e7399
+Description:  This is a utility to resolve DNS requests via a SOCKS5 tunnel and caches the answers.
+
+Package: ipt2socks
+Version: 1.1.3-2
+Depends: libc
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 31110
+Filename: ipt2socks_1.1.3-2_arm_cortex-a15_neon-vfpv4.ipk
+Size: 31858
+SHA256sum: 0e1bcd191b93e13e20c64d60161eb89fd166211d203b00dfbb102bb3e7d7a40d
+Description:  Utility for converting iptables (REDIRECT/TPROXY) to SOCKS5.
+
+Package: pdnsd-alt
+Version: 1.2.9b-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d
+Depends: libc, libpthread
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 88424
+Filename: pdnsd-alt_1.2.9b-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_arm_cortex-a15_neon-vfpv4.ipk
+Size: 89507
+SHA256sum: efeeab400998d66d955961a3327f24a4fa0d90d207b6bdfdbe96f2041c6eb1e1
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: shadowsocksr-libev-alt
+Version: 2.5.6-5
+Depends: libc, libopenssl1.1, libpthread, libpcre, zlib
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 86637
+Filename: shadowsocksr-libev-alt_2.5.6-5_arm_cortex-a15_neon-vfpv4.ipk
+Size: 87276
+SHA256sum: 8270aaec0fc7e30ac56a52e83ecd139b10e087906c156d1caae2fe079233a0cf
+Description:  Lightweight Secured Socks5 Proxy
+
+Package: shadowsocksr-libev-ssr-local
+Version: 2.5.6-5
+Depends: libc, libopenssl1.1, libpthread, libpcre, zlib
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 93185
+Filename: shadowsocksr-libev-ssr-local_2.5.6-5_arm_cortex-a15_neon-vfpv4.ipk
+Size: 93897
+SHA256sum: 5ba68d1e3deaec91036371a543e215fb6b07e5fe5ac9af6f8a45ecf205ce15a3
+Description:  Lightweight Secured Socks5 Proxy
+
+Package: xray-core
+Version: 1.3.1-1
+Depends: libc, ca-bundle
+Provides: v2ray-core
+License: MPL-2.0
+Section: net
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 4047318
+Filename: xray-core_1.3.1-1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 4048949
+SHA256sum: 382af85714b74da542d7354bc525e1482f8539deb4cce46ee5b0229f401ba9b3
+Description:  Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.
+ It secures your network connections and thus protects your privacy.
+

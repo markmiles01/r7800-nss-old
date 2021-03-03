@@ -1,0 +1,33 @@
+Package: appfilter
+Version: 5.0-1
+Depends: libc, libubox20201212, libubus20210215, libuci20130104, libpthread, libjson-c5, libblobmsg-json20201212
+Section: Derry Apps
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 12280
+Filename: appfilter_5.0-1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 13049
+SHA256sum: d3e615b4773d35c2fcea806f68ce2c89f79a29fd542cde0135e7465cf93ac634
+Description:  open appfilter app
+
+Package: luci-app-oaf
+Version: 3.0-1
+Depends: libc, kmod-oaf, appfilter
+Section: luci
+Architecture: all
+Installed-Size: 266808
+Filename: luci-app-oaf_3.0-1_all.ipk
+Size: 267754
+SHA256sum: 609c84f27e002c179b2b0594db2d9aaffa161de6aa1b55fedb864ff01d710cd7
+Description:  Open App Filter Module
+
+Package: luci-i18n-oaf-zh-cn
+Version: 3.0-1
+Depends: libc, luci-app-oaf
+Section: luci
+Architecture: all
+Installed-Size: 803
+Filename: luci-i18n-oaf-zh-cn_3.0-1_all.ipk
+Size: 1644
+SHA256sum: 9096fea672f0330e2425456762f752e1ea007e486c3b812501ab1a2efb244d0f
+Description:  Translation for luci-app-oaf - 简体中文 (Simplified Chinese)
+

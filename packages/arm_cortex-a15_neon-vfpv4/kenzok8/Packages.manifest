@@ -1,0 +1,87 @@
+Package: luci-app-smartdns
+Version: 1-3
+Depends: libc, smartdns
+Source: feeds/kenzok8/luci-app-smartdns
+SourceName: luci-app-smartdns
+Section: luci
+SourceDateEpoch: 1614775288
+Architecture: all
+Installed-Size: 5384
+Filename: luci-app-smartdns_1-3_all.ipk
+Size: 6136
+SHA256sum: 29fdad12f6a69239bb84ef9caf37d13b2c381b8aebe109f7877936ad0a965d91
+Description:  Luci for smartdns server
+
+Package: luci-app-ssr-plus
+Version: 183-8
+Depends: libc, shadowsocksr-libev-alt, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, coreutils, coreutils-base64, pdnsd-alt, wget-ssl, lua, libuci-lua, microsocks, dns2socks, shadowsocksr-libev-ssr-local, tcping, resolveip, xray-core, trojan, ipt2socks, redsocks2
+Source: feeds/kenzok8/luci-app-ssr-plus
+SourceName: luci-app-ssr-plus
+Section: luci
+SourceDateEpoch: 1614775288
+Architecture: all
+Installed-Size: 188144
+Filename: luci-app-ssr-plus_183-8_all.ipk
+Size: 188299
+SHA256sum: 04e6d18349bed254c6414fb9ed9a2edf66d8de49b2683f549c725e50f4042f3e
+Description:  SS/SSR/V2Ray/Trojan/NaiveProxy/Socks5/Tun LuCI interface
+
+Package: luci-i18n-smartdns-zh-cn
+Version: 1-3
+Depends: libc, luci-app-smartdns
+Source: feeds/kenzok8/luci-app-smartdns
+SourceName: luci-i18n-smartdns-zh-cn
+Section: luci
+SourceDateEpoch: 1614775288
+Architecture: all
+Installed-Size: 3189
+Filename: luci-i18n-smartdns-zh-cn_1-3_all.ipk
+Size: 3994
+SHA256sum: 11e9a929547b83a4c235248f66fc25a3cdb8c636e82b577d63abb1fd25785ba7
+Description:  Translation for luci-app-smartdns - 简体中文 (Simplified Chinese)
+
+Package: luci-i18n-ssr-plus-zh-cn
+Version: 183-8
+Depends: libc, luci-app-ssr-plus
+Source: feeds/kenzok8/luci-app-ssr-plus
+SourceName: luci-i18n-ssr-plus-zh-cn
+Section: luci
+SourceDateEpoch: 1614775288
+Architecture: all
+Installed-Size: 6374
+Filename: luci-i18n-ssr-plus-zh-cn_183-8_all.ipk
+Size: 7232
+SHA256sum: 5dfe19e5dc38b384585db23bfad4668c5a3b24df068d8593e624ce1a3f996695
+Description:  Translation for luci-app-ssr-plus - 简体中文 (Simplified Chinese)
+
+Package: microsocks
+Version: 1.0.2-2
+Depends: libc
+Source: feeds/kenzok8/microsocks
+SourceName: microsocks
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1614775288
+Maintainer: lean
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 5041
+Filename: microsocks_1.0.2-2_arm_cortex-a15_neon-vfpv4.ipk
+Size: 5762
+SHA256sum: 239643e75a0dd741532d08694db0f648f1e6c5e874369c8664318d2983183eb2
+Description:  microsocks is a Tiny Proxy in C.
+
+Package: tcping
+Version: 0.3-1
+Depends: libc
+Source: feeds/kenzok8/tcping
+SourceName: tcping
+Section: net
+SourceDateEpoch: 1614775288
+Architecture: arm_cortex-a15_neon-vfpv4
+Installed-Size: 3276
+Filename: tcping_0.3-1_arm_cortex-a15_neon-vfpv4.ipk
+Size: 3970
+SHA256sum: 9f1b581f66def9f5301026da7ce6bb67024840175d396a3980a9eb964ec4c7eb
+Description:  tcping measures the latency of a tcp-connection
+
